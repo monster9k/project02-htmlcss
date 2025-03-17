@@ -9,8 +9,150 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Project 02</h1>
+    <main style="height: 10000px">
+      <!-- Header -->
+      <header class="header fixed">
+        <div class="main-content">
+          <nav class="navbar">
+            <!-- logo -->
+            <img src="./assets/img/Logo.svg" alt="Lesson." class="Lesson" />
+            <ul>
+              <li class="myLink">
+                <a href="#!" class="sp">Home</a>
+              </li>
+              <li class="myLink"><a href="#!" class="sp">Courses</a></li>
+              <li class="myLink"><a href="#!" class="sp">Pricing</a></li>
+              <li class="myLink"><a href="#!" class="sp">Reviews</a></li>
+            </ul>
+            <div class="action">
+              <a href="/signup.html" class="btn sign-up" target="_blank"
+                >Sign Up</a
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Hero -->
+      <div class="Hero">
+        <div class="main-content">
+          <div class="body">
+            <!-- hero left -->
+            <div class="media">
+              <img
+                src="./assets/img/media-hero.svg"
+                alt="Learn without limits and spread knowledge."
+                class="img"
+              />
+              <div class="hero-summary">
+                <!-- block-note 1 -->
+                <div class="block-note">
+                  <!-- icon-hero -->
+                  <div class="icon">
+                    <img
+                      src="./assets/img/icon-hero1.svg"
+                      alt="icon"
+                      class="icon-hero"
+                    />
+                  </div>
+                  <!-- note-hero -->
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">UI/UX Design</p>
+                  </div>
+                </div>
+                <!-- block-note2 -->
+                <div class="block-note">
+                  <!-- icon-hero -->
+                  <div class="icon">
+                    <img
+                      src="./assets/img/icon-hero2.svg"
+                      alt="icon"
+                      class="icon-hero"
+                    />
+                  </div>
+                  <!-- note-hero -->
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">Development</p>
+                  </div>
+                </div>
+                <!-- block-note3 -->
+                <div class="block-note">
+                  <!-- icon-hero -->
+                  <div class="icon">
+                    <img
+                      src="./assets/img/icon-hero3.svg"
+                      alt="icon"
+                      class="icon-hero"
+                    />
+                  </div>
+                  <!-- note-hero -->
+                  <div class="info">
+                    <p class="label">30 Courses</p>
+                    <p class="title">Marketing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- hero right -->
+            <div class="content-block">
+              <h1 class="">Learn without limits and spread knowledge.</h1>
+              <p class="note-Learn">
+                Build new skills for that “this is my year” feeling with
+                courses, certificates, and degrees from world-class universities
+                and companies.
+              </p>
+              <div class="cta-group">
+                <a href="#!" class="btn course">See Course</a>
+                <button class="watch">
+                  <div class="icon">
+                    <img
+                      src="./assets/img/Polygon 2.svg"
+                      alt="Watch video"
+                      class="video"
+                    />
+                  </div>
+                  <span>Watch video</span>
+                </button>
+              </div>
+              <p class="engagement">Recent engagement</p>
+              <p class="desc">
+                  <strong>50K</strong> Students
+                  <strong>70+</strong> Courses
+              </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
+  <!-- Script -->
+  <script>
+    const links = document.querySelectorAll(".myLink");
+    // chọn hết toàn bộ
+    // duyet vong lap
+    links.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        link.classList.add("active");
+      });
+
+      link.addEventListener("mouseout", () => {
+        link.classList.remove("active");
+      });
+    });
+  </script>
 </html>

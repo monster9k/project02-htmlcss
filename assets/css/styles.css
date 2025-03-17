@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  /* Giúp tránh lỗi giao diện bị phình to.
+      Dễ kiểm soát kích thước phần tử. 
+      Phù hợp với thiết kế responsive. */
+}
+
+html {
+  font-size: 62.5%;
+  /* Lúc này, 1rem = 10px thay vì 16px. */
+  /* để có thể quy đổi ra rem */
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------Common--------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.btn {
+  display: inline-block;
+  background: #171100;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 24.5px;
+  min-width: 118px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  /* làm cho trang có thể phóng to thu nhỏ */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------Header--------- */
+
+.header {
+  background: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+
+/* ----------Navbar----------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.navbar ul {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 8px 21px;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.navbar li a:hover,
+.navbar li.active a {
+  color: #171100;
+  font-weight: 600;
+}
+
+.navbar li.active a::after {
+  content: "";
+  left: 21px;
+  bottom: 6px;
+  background-color: #171100;
+  display: block;
+  position: absolute;
+  border-radius: 1px;
+  width: 12px;
+  height: 2px;
+}
+
+.navbar .sp {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.sign-up {
+  margin-left: 48px;
+  min-width: 144px;
+}
+
+/* -----Hero------- */
+
+.Hero {
+  padding-top: 56px;
+  background: #fffcf4;
+}
+
+.Hero .body {
+  display: flex;
+}
+
+.Hero .media {
+  width: 48%;
+  position: relative;
+}
+
+.Hero .content-block {
+  width: 52%;
+}
+
+.Hero .media .img {
+  left: 0;
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.Hero .hero-summary {
+  background: white;
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  width: 270px;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.Hero .block-note {
+  display: flex;
+}
+
+.Hero .block-note + .block-note {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  background: #fff9e8;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-summary .block-note:nth-of-type(2) .icon {
+  background: #fcefff;
+}
+
+.hero-summary .block-note:nth-of-type(3) .icon {
+  background: #ebeaff;
+}
+
+.Hero .info {
+  margin-left: 16px;
+}
+
+.Hero .info .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.87;
+  font-weight: 400;
+}
+
+.Hero .info .title {
+  color: #171100;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.Hero .content-block {
+  padding: 64px 0 0 103px;
+}
+
+.Hero h1 {
+  color: #171100;
+  font-family: "Sen-Bold", sans-serif;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.Hero .note-Learn {
+  margin: 22px 0;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.Hero .cta-group {
+  margin: 38px 0 48px;
+  display: flex;
+  align-items: center;
+}
+
+.Hero .course {
+  background: #ffb900;
+  border-radius: 32px;
+  min-width: 180px;
+  line-height: 64px;
+}
+
+.Hero .watch {
+  border: none;
+  background: #fffcf4;
+  margin-left: 28px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.Hero .watch .icon {
+  background-color: rgba(255, 255, 255, 0.979);
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hero .watch span {
+  margin-left: 14 px;
+  color: #171100;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.Hero .engagement {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
